@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.page-content {
+  flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
+}
+
 input[type=radio] {
     position: absolute;
     left: -9999px
