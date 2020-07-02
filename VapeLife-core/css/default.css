@@ -12,6 +12,40 @@ body {
 footer {
 	flex-shrink: 0;
 }
+.product-items.productList .product-item .product-content {
+    text-align: left;
+}
+.product-items.productList .product-item .img a {
+    position: initial;
+}
+.product-items.productList .product-item .img {
+    border:1px solid #ececec;
+}
+.homepage-blog-posts .post-image-container img {
+    height: 210px;
+}
+#home .products-section .flex-direction-nav a,
+#home .products-section .flex-direction-nav a:before,
+#home .products-section .flex-direction-nav a:after{
+    color: rgba(255,255,255,.8);
+}
+.homepage-blog-posts div#postContent {
+    height: 125px;
+}
+@media (max-width: 991px){
+.product-items.productList .product-item .img {
+    padding-right: 0;
+    width: 32%;
+}
+}
+@media(max-width:767px){
+	.homepage-blog-posts .post-image-container img,
+	.homepage-blog-posts .post-image-container,
+	.homepage-blog-posts div#postContent{
+		height: auto;
+		min-height: auto;
+	}
+}
 
 input[type=radio] {
     position: absolute;
@@ -192,7 +226,7 @@ h1 {
     text-transform: uppercase
 }
 
-.flexslider .slides img {
+.homeCarousel.flexslider .slides img {
     width: 100%
 }
 
@@ -854,12 +888,12 @@ span.freeshipping {
 
 .product-item .img {
     padding: 0;
-    border: 1px solid #000;
+    border: 1px solid #9f9f9f;
     width: 100%;
     height: auto;
     position: relative;
     max-width: 100%;
-    min-height: 515px;
+    min-height: 310px;
 }
 
 .product-item .img a {
