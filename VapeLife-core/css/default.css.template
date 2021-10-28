@@ -32,6 +32,9 @@ footer {
 .homepage-blog-posts div#postContent {
     height: 125px;
 }
+.store_data * {
+    color: #fff;
+}
 #skip a
 {
 position:absolute;
