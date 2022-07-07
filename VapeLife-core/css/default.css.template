@@ -288,8 +288,10 @@ h1 {
 }
 
 section#message p.notice,section#error p.notice {
-    color: #fff
+    color: #fff;
+	background: transparent;
 }
+
 
 .form-control {
     color: #000;
@@ -672,7 +674,9 @@ ul.extrapages li a:hover {
     padding-top: 15px;
     padding-bottom: 15px
 }
-
+.global-footer{
+color:#[footer-links-color];
+}
 .copyright {
     padding-top: 20px;
     padding-bottom: 20px;

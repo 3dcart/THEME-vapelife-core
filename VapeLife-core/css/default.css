@@ -284,8 +284,10 @@ h1 {
 }
 
 section#message p.notice,section#error p.notice {
-    color: #fff
+    color: #fff;
+	background: transparent;
 }
+
 
 .form-control {
     color: #000;
@@ -661,7 +663,9 @@ ul.extrapages li a {
     padding-top: 15px;
     padding-bottom: 15px
 }
-
+.global-footer{
+	color:#000;
+}
 .copyright {
     padding-top: 20px;
     padding-bottom: 20px;
