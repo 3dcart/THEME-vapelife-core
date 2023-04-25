@@ -11,6 +11,11 @@ body {
 .antiCls { 
     visibility: hidden; 
 }
+@media (max-width: 767px) {
+	.antiCls-xs { 
+		visibility: hidden; 
+	}
+}
 .page-content {
 	flex: 1 0 auto;
 }
@@ -622,7 +627,6 @@ span.cart-count {
     display: block;
     line-height: 15px;
     font-weight: 500
-
 }
 
 .copyright {
