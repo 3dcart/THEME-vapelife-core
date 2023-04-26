@@ -16,16 +16,43 @@
     <!--END: FRAME_RSSFEEDS-->
 
     <!--START: page_styles-->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/templates/common-core/lib/bootstrap/css/bootstrap.css" type="text/css" />
-    <link rel="StyleSheet" href="assets/templates/common-core/css/core.css" type="text/css" />
-    [page_styles]
-    <link rel="StyleSheet" href="assets/templates/[template]/css/[stylesheet]" type="text/css" />
+    <link
+        rel="preload stylesheet"
+        href="assets/templates/common-core/lib/bootstrap/css/bootstrap.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="assets/templates/common-core/lib/bootstrap/css/bootstrap.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
+	<link rel="StyleSheet" href="assets/templates/common-core/css/core.css" type="text/css" />
+	[page_styles]
+	<link
+        rel="preload stylesheet"
+        href="assets/templates/[template]/css/[stylesheet]"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="assets/templates/[template]/css/[stylesheet]"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
     <!--END: page_styles-->
 	
 </head>
 <body class="[body_class]" data-currency="[currency_symbol]" data-decimal="[decimal_places]">
-	<div id="skip"><a href="#navbar">Skip to Main Content</a></div>
+    <div id="skip">
+        <a href="#site-header">Skip to Header</a>
+        <a href="#page-content">Skip to Main Content</a>
+        <a href="#site-footer">Skip to Footer</a>
+    </div>
     <section class="top-nav hidden-xs">
         <div class="container">
             <div class="row">
@@ -57,13 +84,9 @@
         </div>
     </section>
 
-    <header class="site-header">
+    <header class="site-header" id="site-header">
         <div class="container">
             <div class="row">
-                
-                
-                
-
                 <div class="col-sm-3 search-form-col">
                     <!--START: FRAME_SEARCH-->
                     <div id="searchBox" class="searchBox">
@@ -160,16 +183,12 @@
         </div>
     </section>
 
-    <!-- <div id="full-width-slider" class="full-width-slider">
-    	<div id="full-width-slider-inner" style="display:none;"></div>
-    </div> -->
-
     <!--Get current page template-->
-    [page_content]
+    <main id="page-content">[page_content]</main>
     <!--/Get current page template-->
 
     <!-- FOOTER -->
-    <footer class="site-footer">
+    <footer class="site-footer antiCls" id="site-footer">
         <div class="container">
 
             <div class="row">
@@ -177,7 +196,7 @@
                     <!--START: FRAME_MAILLIST-->
                     <div class="mailist-box ajax-mailinglist" data-callfront="mailinglist_callfront" data-callback="mailinglist_response">
                         <form method="post" name="mailing" action="mailing_list_ajax.asp" class="clearfix">
-                            <h3>[frame_mailinglist]</h3>
+                            <h2>[frame_mailinglist]</h2>
                             <div class="mailinglist-form clearfix">
                                 <input class="mailinglist-input form-control" type="text" name="email" placeholder="[mailinglist_email-field]" autocomplete="off" aria-required="true" aria-label="email address" aria-invalid="true" />
                             </div>
@@ -258,7 +277,7 @@
                                 <ul id="extrapages" class="list-unstyled row extrapages" role="menu">
                                     <!--START: LINKS-->
                                     <!--START: LINK_FORMAT-->
-                                    <li class="col-sm-6 col-xs-12 text-right"><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom" role="menuitem">[link_name]</a></li>
+                                    <li class="col-sm-6 col-xs-12 text-right" role="menuitem"><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom" >[link_name]</a></li>
                                     <!--END: LINK_FORMAT-->
                                     <!--END: LINKS-->
                                 </ul>
@@ -314,21 +333,57 @@
     [quickview_modal]
     <!--END: quickview_modal-->
     
-    <link rel="stylesheet" href="assets/templates/common-core/lib/fontello/css/fontello.min.css" type="text/css" />
-    <link rel="stylesheet" href="assets/templates/common-core/lib/fontello/css/animation.css" type="text/css" />
+    <link
+        rel="preload stylesheet"
+        href="assets/templates/common-core/lib/fontello/css/fontello.min.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="assets/templates/common-core/lib/fontello/css/fontello.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
+    <link
+        rel="preload stylesheet"
+        href="assets/templates/common-core/lib/fontello/css/animation.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="assets/templates/common-core/lib/fontello/css/animation.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
     
     <!--START: page_scripts-->
-    <script src='assets/templates/common-core/lib/jquery.min.js'></script>
-	<script src='assets/templates/common-core/lib/jquery-migrate-3.0.1.min.js'></script>
-    <script src="assets/templates/common-core/lib/bootstrap/js/bootstrap.js"></script>
-    <script src="assets/templates/common-core/js/core.js"></script>
-    <script src="assets/templates/[template]/js/main.js"></script>
+    <script src="assets/templates/common-core/lib/jquery.min.js"></script>
+	<script src="assets/templates/common-core/lib/jquery-migrate-3.0.1.min.js" defer="defer"></script>
+    <script src="assets/templates/common-core/lib/bootstrap/js/bootstrap.js" defer="defer"></script>
+    <script src="assets/templates/common-core/js/core.js" defer="defer"></script>
+    <script src="assets/templates/[template]/js/main.js" defer="defer"></script>
     [page_scripts]
     <!--END: page_scripts-->
 
     <!--START: quicksearch-->
-    <link rel="stylesheet" href="assets/templates/common-core/quicksearch/quicksearch.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="assets/templates/common-core/quicksearch/jquery.quicksearch.js"></script>
+    <link
+        rel="preload stylesheet"
+        href="assets/templates/common-core/quicksearch/quicksearch.css"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+        <link
+            href="assets/templates/common-core/quicksearch/quicksearch.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </noscript>
+    <script type="text/javascript" src="assets/templates/common-core/quicksearch/jquery.quicksearch.js" defer="defer"></script>
     <script type="text/javascript">
         jQuery(function () {
             jQuery('#searchlight').searchlight('/search_quick.asp');
@@ -337,33 +392,37 @@
     <!--END: quicksearch-->
 
 <!--START: 3dcart stats-->
-<div class="stats hidden"> 
-    <script type="text/javascript">
-        //<![CDATA[
+<div id="3dStats" class="stats hidden"> 
+    <script async language="JavaScript" type="text/javascript">
         var file='/stats/count.asp';
-        var stats_d=new Date();
-        var stats_s=stats_d.getSeconds();
+        var stats_d=new Date(); 
+        var stats_s=stats_d.getSeconds(); 
         var stats_m=stats_d.getMinutes();
         var stats_x=stats_s*stats_m;
         var prdID = '[catalogid]';
         var catID = '[catid]';
+        var stImg = document.createElement('img');
+            stImg.Class
+            stImg.width = '1';
+            stImg.height = '1';
+            stImg.alt = "3dcart stats";
+
         stats_f='' + escape(document.referrer); stats_f=stats_f.replace('_','----');
-        if (navigator.appName=='Netscape'){stats_b='NS';}
-        if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';}
+        if (navigator.appName=='Netscape'){stats_b='NS';} 
+        if (navigator.appName=='Microsoft Internet Explorer'){stats_b='MSIE';} 
         if (navigator.appVersion.indexOf('MSIE 3')>0) {stats_b='MSIE';}
-        stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height;
-        stats_v=navigator.appName;
+        stats_u='' + escape(document.URL); stats_u=stats_u.replace('_','----'); stats_w=screen.width; stats_h=screen.height; 
+        stats_v=navigator.appName; 
         stats_fs = window.screen.fontSmoothingEnabled;
         if (stats_v != 'Netscape') {stats_c=screen.colorDepth;}
         else {stats_c=screen.pixelDepth;}
         stats_j=navigator.javaEnabled();
         info='w=' + stats_w + '&h=' + stats_h + '&c=' + stats_c + '&r=' + stats_f + '&u='+ stats_u + '&fs=' + stats_fs + '&b=' + stats_b + '&x=' + stats_x + '&cat=' + catID + '&prd=' + prdID;
-        document.write('<img src="' + file + '?'+info+ '" width="1" height="1" border="0" alt="stats" />');
-        //]]>
+
+        stImg.src =file + '?' + info; 
+        document.getElementById('3dStats').appendChild(stImg);
     </script>
-    <noscript>
-        <img src="/stats/count.asp" width="90" height="30" alt="" />
-    </noscript>
+    <noscript><img src="/stats/count.asp" width="90" height="30" alt="3dcart stats" /> </noscript>
 </div>
 <!--END: 3dcart stats-->
     
