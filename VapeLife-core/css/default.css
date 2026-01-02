@@ -16,6 +16,9 @@ body {
 		visibility: hidden; 
 	}
 }
+.store_data * {
+    color: #fff;
+}
 .page-content {
 	flex: 1 0 auto;
 }
